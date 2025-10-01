@@ -21,4 +21,8 @@ games_collection = db.collection("games")
 for game in data:
     games_collection.add(game)
 
-print("Upload to Firestore complete.")
+count_query = games_collection.count()
+result = count_query.get()
+db_size = result[0][0].value
+
+print(f"DB size: {db_size} games")

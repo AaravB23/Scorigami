@@ -1,9 +1,9 @@
-import Papa from "papaparse";
 import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+
+import { db } from "./firebase"
 import ScoreGrid from "./components/ScoreGrid";
 import NavControls from "./components/NavControls";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -16,26 +16,27 @@ export default function Home() {
   const sliceSize = 10;
 
   useEffect(() => {
-    fetch("/nfl_scores_cleaned.csv")
-      .then((res) => res.text())
-      .then((text) => {
-        const result = Papa.parse(text, { 
-          header: true,
-          skipEmptyLines: true,
-          transformHeader: h => h.trim(),
-         });
+    const fetchScores = async () => {
+      try {
+        const query = await getDocs(collection(db, "games"));
+        const games = query.docs.map(doc => doc.data());
 
-        console.log("First row object:", result.data[0]); 
+        console.log("First row obj:", games[0]);
 
-        setData(result.data);
-        setScoreSet(new Set(result.data.map(row => `${row.PtsW}-${row.PtsL}`)));
-        
-        const winningScores = result.data.map(row => Number(row.PtsW));
-        const losingScores = result.data.map(row => Number(row.PtsL));
+        setData(games);
+        setScoreSet(new Set(games.map(row => `${row.PtsW}-${row.PtsL}`)));
+
+        const winningScores = games.map(row => Number(row.PtsW));
+        const losingScores = games.map(row => Number(row.PtsL));
 
         setXMax(Math.max(...winningScores) || 0);
         setYMax(Math.max(...losingScores) || 0);
-      });
+      } catch (err) {
+        console.error("Error fetching scores: ", err);
+      }
+    }
+
+    fetchScores();
   }, []);
 
   return (
