@@ -1,6 +1,6 @@
 export default function NavControls({ xStart, yStart, sliceSize, setXStart, setYStart, xMax, yMax }) {
   return (
-    <div className="mt-4 flex gap-2 text-black-500">
+    <div className="mt-4 grid grid-cols-2 gap-2 text-black-500 p-4">
       <button
         className="px-3 py-1 bg-blue-200 rounded hover:bg-blue-300"
         onClick={() => setXStart(Math.max(0, xStart - sliceSize/2))}

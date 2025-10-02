@@ -1,6 +1,6 @@
 import GridCell from "./GridCell";
 
-export default function ScoreGrid({ scoreSet, xStart, yStart, sliceSize }) {
+export default function ScoreGrid({ scoreSet, xStart, yStart, sliceSize, onCellClick }) {
   return (
     <div>
       <div className="flex">
@@ -30,7 +30,9 @@ export default function ScoreGrid({ scoreSet, xStart, yStart, sliceSize }) {
               const losingScore = Math.min(x, y);
               const key = `${winningScore}-${losingScore}`;
 
-              return <GridCell key={`${x}-${y}`} x={x} y={y} occurred={scoreSet.has(key)} />;
+              return <GridCell
+               onCellClick={onCellClick} key={`${x}-${y}`} 
+               x={x} y={y} occurred={scoreSet.has(key)}/>;
             })}
           </div>
         );

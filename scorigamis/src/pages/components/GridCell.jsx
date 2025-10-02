@@ -1,4 +1,4 @@
-export default function GridCell({x, y, occurred }) {
+export default function GridCell({x, y, occurred, onCellClick }) {
   const divColor = x < y ? 'bg-black' :
         occurred ? 'bg-green-500' : 'bg-gray-100';
 
@@ -7,6 +7,7 @@ export default function GridCell({x, y, occurred }) {
 
   return (
     <div 
+      onClick={() => x >= y ? onCellClick(x, y) : null}
       className={`w-12 h-12 border border-blue-300 ${divColor} ${hoverClass}`}
     >
     </div>
