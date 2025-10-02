@@ -48,17 +48,36 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4 p-2">Scorigami Explorer</h1>
-      <div className="flex p-4">
-        
-        <ScoreGrid scoreSet={scoreSet} xStart={xStart} yStart={yStart} sliceSize={sliceSize} onCellClick={onCellClick}/>
-        <NavControls xStart={xStart} yStart={yStart} sliceSize={sliceSize} setXStart={setXStart} setYStart={setYStart} xMax={xMax} yMax={yMax} />
+    <div className="bg-slate-100 min-h-screen font-sans p-4 sm:p-6 lg:p-8">
+      <div className="max-w-7x1 mx-auto">
+        <header className="mb-6 bg-blue-100 rounded-lg p-6 text-center shadow-sm">
+          <h1 className="text-4xl font-sans font-bold text-slate-600 tracking-tight">Scorigami Explorer</h1>
+          <p className="text-blue-600 font-sans mt-1">An interactive grid of every unique score in the NFL.</p>
+          <div className="text-xs font-sans mt-2">
+            <p className="text-slate-900">Data Source:</p> 
+            <a className="text-blue-700"
+              href="https://www.pro-football-reference.com/boxscores/game-scores.htm"
+              target="_blank">
+              Pro Football Reference
+            </a>
+          </div>
+        </header>
+      
+        <main className="grid grid-cols-1 lg:grid-cols-3 gap-1">
+          <div className="lg:col-span-2 flex flex-col items-center">
+            <ScoreGrid scoreSet={scoreSet} xStart={xStart} yStart={yStart} sliceSize={sliceSize} onCellClick={onCellClick}/>
+          </div>
+          <aside className="space-y-6">
+            <div className="bg-white rounded-lg shadow-md p-4">
+              <h2 className="font-bold text-lg text-slate-700 mb-3 text-center">Controls</h2>
+              <NavControls xStart={xStart} yStart={yStart} sliceSize={sliceSize} setXStart={setXStart} setYStart={setYStart} xMax={xMax} yMax={yMax} />
+            </div>
 
-        <div className="mt-4 p-4 border rounded bg-gray-50">
-          <h2 className="font-bold">Selected Score</h2>
-          <InfoArea selectedCell={selectedCell} games={data} />
-        </div>
+            <div className="bg-white rounded-lg shadow-md min-h-[18rem]">
+              <InfoArea selectedCell={selectedCell} games={data} />
+            </div>
+          </aside>
+        </main>
       </div>
     </div>
   );

@@ -1,26 +1,28 @@
 export default function NavControls({ xStart, yStart, sliceSize, setXStart, setYStart, xMax, yMax }) {
+  const buttonClass = "flex items-center justify-center p-3 bg-slate-700 rounded-lg shadow-md hover:bg-slate-600 active:shadow-inner transition-all text-white font-semibold";
+
   return (
-    <div className="mt-4 grid grid-cols-2 gap-2 text-black-500 p-4">
+    <div className="grid grid-cols-2 gap-3 p-4">
       <button
-        className="px-3 py-1 bg-blue-200 rounded hover:bg-blue-300"
+        className={buttonClass}
         onClick={() => setXStart(Math.max(0, xStart - sliceSize/2))}
       >
         Left
       </button>
       <button
-        className="px-3 py-1 bg-blue-200 rounded hover:bg-blue-300"
+        className={buttonClass}
         onClick={() => setXStart(Math.min(xMax, xStart + sliceSize/2))}
       >
         Right
       </button>
       <button
-        className="px-3 py-1 bg-blue-200 rounded hover:bg-blue-300"
+        className={buttonClass}
         onClick={() => setYStart(Math.max(0, yStart - sliceSize/2))}
       >
         Up
       </button>
       <button
-        className="px-3 py-1 bg-blue-200 rounded hover:bg-blue-300"
+        className={buttonClass}
         onClick={() => setYStart(Math.min(yMax, yStart + sliceSize/2))}
       >
         Down
