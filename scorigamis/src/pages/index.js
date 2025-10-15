@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
-import { db } from "./firebase"
+import { db } from "./lib/firebase"
 import ScoreGrid from "./components/ScoreGrid";
 import NavControls from "./components/NavControls";
 import InfoArea from "./components/InfoArea";
@@ -51,8 +51,8 @@ export default function Home() {
     <div className="bg-slate-100 min-h-screen font-sans p-4 sm:p-6 lg:p-8">
       <div className="max-w-7x1 mx-auto">
         <header className="mb-6 bg-blue-100 rounded-lg p-6 text-center shadow-sm">
-          <h1 className="text-4xl font-sans font-bold text-slate-600 tracking-tight">Scorigami Explorer</h1>
-          <p className="text-blue-600 font-sans mt-1">An interactive grid of every unique score in the NFL.</p>
+          <h1 className="text-4xl font-sans font-bold text-emerald-600 tracking-tight">Scorigami Explorer</h1>
+          <p className="text-slate-600 font-sans mt-1">An interactive grid of every unique score in the NFL.</p>
           <div className="text-xs font-sans mt-2">
             <p className="text-slate-900">Data Source:</p> 
             <a className="text-blue-700"

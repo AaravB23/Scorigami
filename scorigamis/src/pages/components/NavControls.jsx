@@ -1,3 +1,4 @@
+// Creates buttons for navigation and ensures user stays within limits
 export default function NavControls({ xStart, yStart, sliceSize, setXStart, setYStart, xMax, yMax }) {
   const buttonClass = "flex items-center justify-center p-3 bg-slate-700 rounded-lg shadow-md hover:bg-slate-600 active:shadow-inner transition-all text-white font-semibold";
 

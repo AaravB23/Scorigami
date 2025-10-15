@@ -1,3 +1,4 @@
+// Renders main grid with scores
 import GridCell from "./GridCell";
 
 export default function ScoreGrid({ scoreSet, xStart, yStart, sliceSize, onCellClick }) {

@@ -1,5 +1,8 @@
+// Displays details of selected score
 export default function InfoArea({selectedCell, games}) {
 
+    // Finds game with selected score
+    // x : winning score, y : losing score
     function findGames(x, y) {
         if (!games || games.length === 0) return null;
 
@@ -9,6 +12,7 @@ export default function InfoArea({selectedCell, games}) {
         );
     }
 
+    // Before any cell clicked, show placeholder information
     if (!selectedCell) {
         return (
             <div className="flex flex-col items-center justify-center text-center p-6 h-full">
@@ -18,11 +22,13 @@ export default function InfoArea({selectedCell, games}) {
         );
     }
 
+    // Find matching cell for the score clicked
     const match = findGames(selectedCell.x, selectedCell.y);
     console.log(match);
 
     let content;
     if (match) {
+        // If match found, and win score is larger than lose score.
         if (selectedCell.x >= selectedCell.y) {
             content = (
                 <div className="p-4">
@@ -45,6 +51,7 @@ export default function InfoArea({selectedCell, games}) {
             )
         } 
     } else {
+        // If score never happened
         content = (
             <div className="p-4 text-center">
                 <p className="text-slate-600 font-semibold mb-2">
