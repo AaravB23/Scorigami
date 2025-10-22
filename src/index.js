@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
-import { db } from "../lib/firebase"
-import ScoreGrid from "../components/ScoreGrid";
-import NavControls from "../components/NavControls";
-import InfoArea from "../components/InfoArea";
+import { db } from "./pages/lib/firebase"
+import ScoreGrid from "./pages/components/ScoreGrid";
+import NavControls from "./pages/components/NavControls";
+import InfoArea from "./pages/components/InfoArea";
 
 export default function Home() {
   const [data, setData] = useState([]);

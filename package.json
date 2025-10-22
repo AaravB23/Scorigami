@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev ./src",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start ./src",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
@@ -15,8 +15,8 @@
     "next": "15.5.4",
     "pandas": "^0.0.3",
     "papaparse": "^5.5.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
