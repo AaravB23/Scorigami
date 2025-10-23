@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
-import { db } from "./pages/lib/firebase"
-import ScoreGrid from "./pages/components/ScoreGrid";
-import NavControls from "./pages/components/NavControls";
-import InfoArea from "./pages/components/InfoArea";
+import { db } from "./lib/firebase"
+import ScoreGrid from "./components/ScoreGrid";
+import NavControls from "./components/NavControls";
+import InfoArea from "./components/InfoArea";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -27,7 +27,7 @@ export default function Home() {
       try {
         const query = await getDocs(collection(db, "games"));
         const games = query.docs.map(doc => doc.data());
-
+        
         console.log("First row obj:", games[0]);
 
         setData(games);
@@ -46,7 +46,7 @@ export default function Home() {
 
     fetchScores();
   }, []);
-
+  
   return (
     <div className="bg-slate-100 min-h-screen font-sans p-4 sm:p-6 lg:p-8">
       <div className="max-w-7x1 mx-auto">

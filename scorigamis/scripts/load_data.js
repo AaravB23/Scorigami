@@ -23,6 +23,26 @@ if (!admin.apps.length) {
 }
 const db = admin.firestore();
 
+// Clears the database, only ran sometimes.
+async function clearCollection(collectionName, batchSize = 200) {
+  const collectionRef = db.collection(collectionName);
+  const snapshot = await collectionRef.limit(batchSize).get();
+
+  if (snapshot.empty) {
+    console.log(`${collectionName} collection already empty.`);
+    return;
+  }
+
+  const batch = db.batch();
+  snapshot.docs.forEach((doc) => batch.delete(doc.ref));
+
+  await batch.commit();
+  console.log(`Deleted ${snapshot.size} docs from ${collectionName}`);
+
+  // Recurse until the collection is empty
+  await clearCollection(collectionName, batchSize);
+}
+
 // Read the CSV 
 async function readCSV(filePath) {
     const file = fs.readFileSync(filePath, "utf8");
@@ -101,6 +121,10 @@ async function uploadGamesToFirestore(games) {
         const dir = path.join(process.cwd(), "../public");
         const filePath = findCleanedCSV(dir);
     if (!filePath) throw new Error("No cleaned CSV found in ../public.");
+
+    // Only clear if want to reset DB.
+    const resetDB = true;
+    if (resetDB) await clearCollection("games");
 
     const games = await readCSV(filePath);
     if (!games.length) throw new Error("CSV file empty or unreadable.");
