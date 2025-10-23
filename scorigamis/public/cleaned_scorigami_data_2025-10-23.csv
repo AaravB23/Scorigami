@@ -12,7 +12,7 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 24-10,24,10,137,Arizona Cardinals,Pittsburgh Steelers,12,3,2023
 27-20,27,20,132,Los Angeles Rams,Indianapolis Colts,9,28,2025
 23-17,23,17,128,Minnesota Vikings,New York Jets,10,6,2024
-20-10,20,10,125,Las Vegas Raiders,Tennessee Titans,10,12,2025
+20-10,20,10,126,San Francisco 49ers,Atlanta Falcons,10,19,2025
 27-17,27,17,124,Los Angeles Chargers,Tennessee Titans,11,10,2024
 20-13,20,13,120,Arizona Cardinals,New Orleans Saints,9,7,2025
 24-20,24,20,120,Philadelphia Eagles,Dallas Cowboys,9,4,2025
@@ -66,12 +66,12 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 13-0,13,0,65,San Francisco 49ers,New Orleans Saints,11,27,2022
 20-3,20,3,65,Miami Dolphins,Cleveland Browns,12,29,2024
 17-3,17,3,65,Los Angeles Rams,Baltimore Ravens,10,12,2025
+31-13,31,13,65,New England Patriots,Tennessee Titans,10,19,2025
 28-17,28,17,65,Miami Dolphins,Los Angeles Rams,11,1,2020
 16-14,16,14,65,Kansas City Chiefs,Denver Broncos,11,10,2024
 30-24,30,24,65,Washington Commanders,Atlanta Falcons,12,29,2024
 17-6,17,6,64,New York Giants,Detroit Lions,12,18,2016
 21-10,21,10,64,Philadelphia Eagles,Minnesota Vikings,10,23,2016
-31-13,31,13,64,Denver Broncos,Indianapolis Colts,12,15,2024
 24-3,24,3,64,Seattle Seahawks,Miami Dolphins,9,22,2024
 24-0,24,0,63,New Orleans Saints,Las Vegas Raiders,10,30,2022
 34-24,34,24,63,Cincinnati Bengals,Carolina Panthers,9,29,2024
@@ -89,9 +89,9 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 23-21,23,21,57,New England Patriots,Miami Dolphins,1,1,2023
 20-6,20,6,56,Tampa Bay Buccaneers,Tennessee Titans,11,12,2023
 7-6,7,6,56,New York Jets,Arizona Cardinals,12,2,2012
+13-6,13,6,56,Carolina Panthers,New York Jets,10,19,2025
 30-17,30,17,55,Kansas City Chiefs,Detroit Lions,10,12,2025
 35-14,35,14,55,Baltimore Ravens,New York Giants,12,15,2024
-13-6,13,6,55,Pittsburgh Steelers,Denver Broncos,9,15,2024
 19-16,19,16,55,Houston Texans,Tennessee Titans,12,17,2023
 34-27,34,27,54,Atlanta Falcons,Washington Commanders,9,28,2025
 24-16,24,16,54,Baltimore Ravens,Tennessee Titans,10,15,2023
@@ -100,17 +100,17 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 26-23,26,23,54,San Francisco 49ers,Los Angeles Rams,10,2,2025
 30-14,30,14,53,Dallas Cowboys,Carolina Panthers,12,15,2024
 34-20,34,20,53,Los Angeles Chargers,Las Vegas Raiders,1,5,2025
+27-23,27,23,53,Green Bay Packers,Arizona Cardinals,10,19,2025
 23-16,23,16,52,New England Patriots,Buffalo Bills,1,5,2025
 23-13,23,13,52,Minnesota Vikings,Tennessee Titans,11,17,2024
-27-23,27,23,52,Dallas Cowboys,Houston Texans,12,11,2022
 23-14,23,14,52,Kansas City Chiefs,Houston Texans,1,18,2025
 30-20,30,20,52,Buffalo Bills,Indianapolis Colts,11,10,2024
 21-13,21,13,52,Minnesota Vikings,Indianapolis Colts,11,3,2024
 19-13,19,13,51,Houston Texans,Chicago Bears,9,15,2024
+35-7,35,7,50,Los Angeles Rams,Jacksonville Jaguars,10,19,2025
 13-3,13,3,50,Cleveland Browns,Baltimore Ravens,12,17,2022
+38-24,38,24,50,Indianapolis Colts,Los Angeles Chargers,10,19,2025
 21-16,21,16,49,Indianapolis Colts,Chicago Bears,9,22,2024
-35-7,35,7,49,San Francisco 49ers,Tampa Bay Buccaneers,12,11,2022
-38-24,38,24,49,Kansas City Chiefs,Buffalo Bills,1,24,2021
 14-6,14,6,49,Arizona Cardinals,Detroit Lions,11,16,2014
 19-14,19,14,48,Las Vegas Raiders,Jacksonville Jaguars,12,22,2024
 20-19,20,19,48,Tampa Bay Buccaneers,Houston Texans,9,15,2025
@@ -118,9 +118,9 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 16-0,16,0,48,Denver Broncos,Tennessee Titans,10,13,2019
 27-3,27,3,47,Tennessee Titans,Cincinnati Bengals,10,1,2023
 34-0,34,0,47,Green Bay Packers,New Orleans Saints,12,23,2024
+31-0,31,0,47,Kansas City Chiefs,Las Vegas Raiders,10,19,2025
 10-3,10,3,46,New England Patriots,New York Jets,11,20,2022
 35-17,35,17,46,Cincinnati Bengals,Atlanta Falcons,10,23,2022
-31-0,31,0,46,Indianapolis Colts,Houston Texans,12,5,2021
 34-10,34,10,46,Detroit Lions,Cleveland Browns,9,28,2025
 38-7,38,7,46,Philadelphia Eagles,New York Giants,1,21,2023
 31-20,31,20,46,Indianapolis Colts,Houston Texans,9,17,2023
@@ -132,9 +132,9 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 26-24,26,24,44,Dallas Cowboys,Tampa Bay Buccaneers,12,22,2024
 23-0,23,0,43,Indianapolis Colts,Dallas Cowboys,12,16,2018
 30-28,30,28,43,New York Jets,Washington Commanders,12,24,2023
+26-14,26,14,43,Chicago Bears,New Orleans Saints,10,19,2025
 28-27,28,27,43,Indianapolis Colts,New York Jets,11,17,2024
 34-21,34,21,43,New York Jets,Buffalo Bills,11,2,2017
-26-14,26,14,42,New Orleans Saints,New York Giants,10,5,2025
 16-7,16,7,42,Cincinnati Bengals,Cleveland Browns,11,29,2009
 28-0,28,0,42,San Francisco 49ers,Los Angeles Rams,9,12,2016
 34-28,34,28,42,Buffalo Bills,Arizona Cardinals,9,8,2024
@@ -193,18 +193,18 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 19-10,19,10,27,Tennessee Titans,Indianapolis Colts,10,23,2022
 37-20,37,20,27,Kansas City Chiefs,Baltimore Ravens,9,28,2025
 16-3,16,3,27,Washington Redskins,Tampa Bay Buccaneers,11,11,2018
+31-6,31,6,26,Cleveland Browns,Miami Dolphins,10,19,2025
 17-12,17,12,26,New York Giants,Seattle Seahawks,12,6,2020
 33-30,33,30,26,Green Bay Packers,Carolina Panthers,12,24,2023
 38-35,38,35,26,Tampa Bay Buccaneers,Seattle Seahawks,10,5,2025
 22-17,22,17,26,Kansas City Chiefs,Atlanta Falcons,9,22,2024
+24-9,24,9,26,Detroit Lions,Tampa Bay Buccaneers,10,20,2025
 45-21,45,21,26,Carolina Panthers,Miami Dolphins,11,13,2017
 35-24,35,24,26,Kansas City Chiefs,Tennessee Titans,1,19,2020
 45-17,45,17,25,Buffalo Bills,New York Jets,11,14,2021
-31-6,31,6,25,Arizona Cardinals,New York Jets,11,10,2024
 15-10,15,10,25,Miami Dolphins,New England Patriots,10,6,2024
 26-16,26,16,25,Arizona Cardinals,Carolina Panthers,10,2,2022
 41-7,41,7,25,Philadelphia Eagles,Dallas Cowboys,12,29,2024
-24-9,24,9,25,Denver Broncos,Kansas City Chiefs,10,29,2023
 45-7,45,7,25,New England Patriots,Cleveland Browns,11,14,2021
 42-21,42,21,25,Minnesota Vikings,Atlanta Falcons,12,8,2024
 37-10,37,10,25,Green Bay Packers,Minnesota Vikings,1,2,2022
@@ -212,6 +212,7 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 35-0,35,0,24,Buffalo Bills,Miami Dolphins,9,19,2021
 12-7,12,7,24,Minnesota Vikings,Jacksonville Jaguars,11,10,2024
 41-17,41,17,24,Baltimore Ravens,Cleveland Browns,9,14,2025
+27-19,27,19,24,Seattle Seahawks,Houston Texans,10,20,2025
 28-16,28,16,24,San Francisco 49ers,Seattle Seahawks,12,10,2023
 10-10,10,10,24,Philadelphia Eagles,Baltimore Ravens,11,16,1997
 35-10,35,10,23,Baltimore Ravens,Cleveland Browns,1,4,2025
@@ -221,7 +222,6 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 21-3,21,3,23,Carolina Panthers,Tampa Bay Buccaneers,10,23,2022
 20-9,20,9,23,Los Angeles Chargers,Las Vegas Raiders,9,15,2025
 42-17,42,17,23,Detroit Lions,Denver Broncos,12,16,2023
-27-19,27,19,23,Tampa Bay Buccaneers,New Orleans Saints,1,5,2025
 31-16,31,16,23,Miami Dolphins,New York Giants,10,8,2023
 26-13,26,13,22,Kansas City Chiefs,New Orleans Saints,10,7,2024
 13-12,13,12,22,Kansas City Chiefs,Los Angeles Chargers,1,7,2024
@@ -308,6 +308,7 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 29-28,29,28,15,Indianapolis Colts,Denver Broncos,9,14,2025
 37-17,37,17,15,Philadelphia Eagles,Cincinnati Bengals,10,27,2024
 37-27,37,27,15,Cincinnati Bengals,Tennessee Titans,12,15,2024
+33-31,33,31,15,Cincinnati Bengals,Pittsburgh Steelers,10,16,2025
 15-0,15,0,15,Oakland Raiders,Kansas City Chiefs,12,16,2012
 42-28,42,28,15,Carolina Panthers,Tampa Bay Buccaneers,11,4,2018
 30-6,30,6,15,New York Jets,Houston Texans,12,10,2023
@@ -319,18 +320,17 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 33-10,33,10,15,Denver Broncos,New Orleans Saints,10,17,2024
 22-0,22,0,14,Green Bay Packers,Buffalo Bills,9,30,2018
 41-13,41,13,14,Atlanta Falcons,San Francisco 49ers,12,18,2016
+28-22,28,22,14,Philadelphia Eagles,Minnesota Vikings,10,19,2025
 25-17,25,17,14,Kansas City Chiefs,Cincinnati Bengals,12,31,2023
 16-12,16,12,14,Las Vegas Raiders,New York Jets,11,12,2023
 29-23,29,23,14,Los Angeles Rams,Indianapolis Colts,10,1,2023
 25-22,25,22,14,New England Patriots,New York Jets,10,27,2024
 35-23,35,23,14,Buffalo Bills,New England Patriots,1,8,2023
-33-31,33,31,14,Cleveland Browns,Baltimore Ravens,11,12,2023
 34-33,34,33,14,Arizona Cardinals,Minnesota Vikings,9,19,2021
 16-9,16,9,14,Denver Broncos,Los Angeles Chargers,12,31,2023
 24-12,24,12,13,Green Bay Packers,Los Angeles Rams,12,19,2022
 31-9,31,9,13,Detroit Lions,Minnesota Vikings,1,5,2025
 41-28,41,28,13,New England Patriots,Los Angeles Chargers,1,13,2019
-28-22,28,22,13,Philadelphia Eagles,Los Angeles Rams,1,19,2025
 3-3,3,3,13,Chicago Bears,New York Giants,10,31,1937
 22-7,22,7,13,Washington Football Team,New York Giants,1,9,2022
 37-3,37,3,13,Baltimore Ravens,Seattle Seahawks,11,5,2023
@@ -626,6 +626,7 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 43-28,43,28,3,Atlanta Falcons,Tampa Bay Buccaneers,11,3,2016
 34-22,34,22,3,Chicago Bears,Detroit Lions,11,11,2018
 51-23,51,23,3,Philadelphia Eagles,Denver Broncos,11,5,2017
+33-32,33,32,3,Denver Broncos,New York Giants,10,19,2025
 38-32,38,32,3,Atlanta Falcons,New Orleans Saints,1,1,2017
 40-23,40,23,3,Atlanta Falcons,Minnesota Vikings,10,18,2020
 39-35,39,35,3,Detroit Lions,Indianapolis Colts,9,11,2016
@@ -716,7 +717,6 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 47-41,47,41,2,Buffalo Bills,Houston Oilers,9,24,1989
 29-18,29,18,2,Atlanta Falcons,Arizona Cardinals,11,30,2014
 39-28,39,28,2,Atlanta Falcons,Dallas Cowboys,9,27,2015
-33-32,33,32,2,Atlanta Falcons,Green Bay Packers,10,30,2016
 43-6,43,6,2,Atlanta Falcons,Las Vegas Raiders,11,29,2020
 13-8,13,8,2,Atlanta Falcons,New York Jets,12,3,2023
 55-0,55,0,2,Houston Oilers,Oakland Raiders,9,9,1961
@@ -766,6 +766,7 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 35-29,35,29,2,Dallas Cowboys,New England Patriots,10,17,2021
 43-3,43,3,2,Dallas Cowboys,Atlanta Falcons,11,14,2021
 49-29,49,29,2,Dallas Cowboys,Chicago Bears,10,30,2022
+44-22,44,22,2,Dallas Cowboys,Washington Commanders,10,19,2025
 50-34,50,34,2,San Diego Chargers,Cincinnati Bengals,12,20,1982
 40-38,40,38,2,Los Angeles Raiders,Dallas Cowboys,10,23,1983
 17-11,17,11,2,San Francisco 49ers,Philadelphia Eagles,9,19,2021
@@ -1016,7 +1017,6 @@ Score,PtsW,PtsL,Count,W_Team,L_Team,Month,Day,Year
 21-2,21,2,1,Providence Steam Roller,Canton Bulldogs,11,11,1926
 10-4,10,4,1,Racine Legion,Chicago Cardinals,11,25,1923
 43-43,43,43,1,Boston Patriots,Oakland Raiders,10,16,1964
-44-22,44,22,1,Oakland Raiders,Kansas City Chiefs,11,23,1967
 48-6,48,6,1,Oakland Raiders,Buffalo Bills,9,15,1968
 43-32,43,32,1,Oakland Raiders,New York Jets,11,17,1968
 41-26,41,26,1,Oakland Raiders,New England Patriots,12,1,1974
