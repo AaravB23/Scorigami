@@ -18,8 +18,9 @@ with sync_playwright() as p:
     print("Launching page...")
     for i in range(3):
         try:
-            print(f"Attempt {i + 1} to load page...")
-            page.goto(url, timeout=180000, wait_until="networkidle")
+            print(f"Attempt {i + 1} to load page...") 
+            # 60-second timeout.
+            page.goto(url, timeout=60000, wait_until="domcontentloaded")
             
             # Wait for the specific element to be ready
             page.wait_for_selector("#games")
