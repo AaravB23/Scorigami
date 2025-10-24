@@ -14,9 +14,24 @@ with sync_playwright() as p:
     print("Launching browser...")
     browser = p.chromium.launch(headless=True)
     page = browser.new_page()
+    
     print("Launching page...")
-    page.goto(url, timeout=60000)
-    page.wait_for_selector("#games")
+    for i in range(3):
+        try:
+            print(f"Attempt {i + 1} to load page...")
+            page.goto(url, timeout=180000, wait_until="networkidle")
+            
+            # Wait for the specific element to be ready
+            page.wait_for_selector("#games")
+            
+            print("Page loaded successfully.")
+            break # If successful, exit the loop
+            
+        except Exception as e:
+            print(f"Attempt {i + 1} failed: {e}")
+            if i == 2: # If this was the last attempt
+                print("All 3 attempts failed.")
+                raise # Re-raise the error to stop the script
 
     print("Extracting HTML...")
     html = page.locator("#games").inner_html()
