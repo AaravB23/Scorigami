@@ -14,8 +14,12 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const serviceAccountPath = path.join(__dirname, "serviceAccountKey.json");
 
+// Used before Github Actions
+//const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, "utf8"));
+
 // Initialize Firebase Admin SDK server-side
-const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, "utf8"));
+// Service Account saved on Github
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
 if (!admin.apps.length) {
     admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),

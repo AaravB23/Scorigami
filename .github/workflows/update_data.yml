@@ -1,0 +1,44 @@
+name: Scheduled Scorigami Update
+
+on:
+  schedule:
+    - cron: '0 6 * * 1,2,5'  # 1 AM EST (Mon, Tue, Fri)
+  workflow_dispatch: # manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas playwright
+          playwright install chromium
+
+      - name: Run scraper.py
+        run: python scripts/scraper.py
+
+      - name: Run data_cleaner.py
+        run: python scripts/data_cleaner.py
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run load_data.js
+        run: node scripts/load_data.js
+        env:
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
