@@ -19,12 +19,27 @@ const serviceAccountPath = path.join(__dirname, "serviceAccountKey.json");
 
 // Initialize Firebase Admin SDK server-side
 // Service Account saved on Github
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
-if (!admin.apps.length) {
-    admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    });
+let serviceAccount;
+if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
+  // Running in GitHub Actions — use secret from env
+  serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
+} else {
+  // Running locally — use local file
+  const serviceAccountPath = path.join(__dirname, "serviceAccountKey.json");
+  if (!fs.existsSync(serviceAccountPath)) {
+    throw new Error(
+      "Missing Firebase credentials."
+    );
+  }
+  serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, "utf8"));
 }
+
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+}
+
 const db = admin.firestore();
 
 // Clears the database, only ran sometimes.
@@ -122,7 +137,10 @@ async function uploadGamesToFirestore(games) {
 // Main Execution, execute immediately
 (async () => {
     try {
-        const dir = path.join(process.cwd(), "../public");
+        const dir =
+        process.env.GITHUB_ACTIONS === "true"
+            ? path.join(process.cwd(), "public") // GitHub Actions
+            : path.join(__dirname, "../public"); // Local
         const filePath = findCleanedCSV(dir);
     if (!filePath) throw new Error("No cleaned CSV found in ../public.");
 

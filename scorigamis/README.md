@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Scorigami: NFL Unique Score Tracker
 
-## Getting Started
+Live Project: https://aaravb23.github.io/Scorigami
 
-First, run the development server:
+Repository: https://github.com/AaravB23/Scorigami
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What it does
+Scorigami is a web app that tracks every unique NFL final score, a concept popularized by Jon Bois.
+It scrapes the latest game data from [Pro Football Reference](https://www.pro-football-reference.com/boxscores/game-scores.htm) 
+using a Playwright + Python pipeline, processes and cleans the dataset, and visualizes the results in a React dashboard hosted on Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app automatically updates a few times per week via GitHub Actions, so the dataset and charts are up-to-date.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Automated Web Scraper**  
+  Uses [Playwright](https://playwright.dev/python/docs/intro) to scrape the live score table from Pro Football Reference.
+  
+- **Data Cleaning Pipeline**  
+  Python scripts parse, normalize, and clean historical data into a structured format for database storage.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **Cloud Database Upload**  
+  Cleaned data is uploaded to **Google Firestore** via Firebase Admin SDK.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Continuous Updates via GitHub Actions**  
+  Scheduled runs three times per week automatically refresh the data.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+| Layer | Tools Used |
+|-------|-------------|
+| **Scraping** | Python, Playwright, pandas |
+| **Data Cleaning** | pandas, regex |
+| **Database** | Firebase Firestore |
+| **Automation** | GitHub Actions |
+| **Frontend (WIP)** | React, Node.js, Tailwind CSS |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
